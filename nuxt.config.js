@@ -1,10 +1,3 @@
-// const LANG = 'en_US';
-// const TYPE = 'website';
-// const URL = 'https://hippocrades.com';
-// const SITE_NAME = 'hippocrades.com';
-
-// https://nuxt.com/docs/api/configuration/nuxt-config
-// eslint-disable-next-line no-undef
 export default defineNuxtConfig({
   preset: 'node-server',
 
@@ -15,7 +8,7 @@ export default defineNuxtConfig({
   ],
 
   gtag: {
-    id: 'G-M1KERXTK1H', // TODO: Add your google analytics 4 tag here
+    id: 'G-M1KERXTK1H',
   },
 
   srcDir: './src',
@@ -48,8 +41,9 @@ export default defineNuxtConfig({
   tailwindcss: {
     cssPath: '~/assets/css/tailwind.css',
     configPath: 'tailwind.config',
-    exposeConfig: false,
-    exposeLevel: 2,
+    exposeConfig: {
+      level: 2,
+    },
     config: {},
     injectPosition: 'first',
     viewer: true,
